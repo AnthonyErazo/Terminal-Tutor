@@ -10,8 +10,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/cli.ts",
-    "test": "node --test tests/*.test.ts",
-    "test:coverage": "node --test --experimental-test-coverage tests/*.test.ts"
+    "test": "tsx --test tests/*.test.ts",
+    "test:coverage": "tsx --test --experimental-test-coverage tests/*.test.ts"
   },
   "keywords": [],
   "author": "",
