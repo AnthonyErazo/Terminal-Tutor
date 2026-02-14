@@ -1,0 +1,94 @@
+id: git-basics
+title: Git Basics
+description: Learn fundamental Git commands through hands-on practice
+
+steps:
+  - id: step-1
+    goal: Initialize a Git repository
+    instruction: Create a new Git repository in the current directory
+    validation:
+      type: git-initialized
+    hint: |-
+      Run:
+      git init
+
+  - id: step-2
+    goal: Create a file
+    instruction: Create a file named README.md (a file, not a folder)
+    validation:
+      type: file-exists
+      file: README.md
+    hint: |-
+      Create the file using redirection (do not use mkdir).
+      Windows cmd:
+      echo Hello>README.md
+      Linux or macOS:
+      echo "Hello" > README.md
+
+  - id: step-3
+    goal: Stage the file
+    instruction: Add README.md to the staging area
+    validation:
+      type: file-staged
+      file: README.md
+    hint: |-
+      Run either:
+      git add README.md
+      or
+      git add .
+
+  - id: step-4
+    goal: Commit the file
+    instruction: Create your first commit with a message
+    validation:
+      type: file-committed
+      file: README.md
+    hint: |-
+      Run:
+      git commit -m "first commit"
+
+  - id: step-5
+    goal: Create and switch to a branch
+    instruction: Create a new branch named feature and switch to it
+    validation:
+      type: branch-active
+      branch: feature
+    hint: |-
+      Create and switch in one command:
+      git checkout -b feature
+      Alternative:
+      git switch -c feature
+
+  - id: step-6
+    goal: Create another file
+    instruction: Create a file named app.js (a file, not a folder)
+    validation:
+      type: file-exists
+      file: app.js
+    hint: |-
+      Windows cmd:
+      echo console.log("hello")>app.js
+      Linux or macOS:
+      echo 'console.log("hello")' > app.js
+
+  - id: step-7
+    goal: Stage app.js
+    instruction: Add app.js to the staging area
+    validation:
+      type: file-staged
+      file: app.js
+    hint: |-
+      Run either:
+      git add app.js
+      or
+      git add .
+
+  - id: step-8
+    goal: Commit app.js
+    instruction: Commit app.js with a message
+    validation:
+      type: file-committed
+      file: app.js
+    hint: |-
+      Run:
+      git commit -m "add app.js"
