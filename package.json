@@ -10,8 +10,8 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/cli.ts",
-    "test": "node --import tsx --test \"tests/**/*.test.ts\"",
-    "test:coverage": "node --import tsx --test --experimental-test-coverage \"tests/**/*.test.ts\""
+    "test": "node run-tests.mjs",
+    "test:coverage": "node run-tests.mjs --coverage"
   },
   "keywords": [],
   "author": "",
